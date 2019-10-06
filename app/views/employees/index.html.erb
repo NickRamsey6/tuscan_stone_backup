@@ -1,0 +1,25 @@
+<h1>Employees:</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Wage</th>
+      <th>Store ID</th>
+      <th>ID</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @employees.each do |employee| %>
+    <tr>
+      <td><%= link_to employee.name, employee_path(employee) %></td>
+      <td><%= employee.wage %></td>
+      <td><%= employee.store_id %></td>
+      <td><%= employee.id %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<p><%= link_to "Add a employee", new_employee_path %></p>
+<p><%= link_to "Home", root_path %></p>
