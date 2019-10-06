@@ -1,0 +1,19 @@
+<h1>Tuscan Stone Pizza</h1>
+
+<h3>Import Stores Data</h3>
+<%= form_tag import_stores_path, multipart: true do %>
+<%= file_field_tag :file %>
+<%= submit_tag "Upload" %>
+<% end %>
+
+<h3>Import Product Data</h3>
+<%= form_tag import_products_path, multipart: true do %>
+<%= file_field_tag :file %>
+<%= submit_tag "Upload" %>
+<% end %>
+
+<h3>Import Employee Data</h3>
+<%= form_tag import_employees_path, multipart: true do %>
+<%= file_field_tag :file %>
+<%= submit_tag "Upload" %>
+<% end %>
