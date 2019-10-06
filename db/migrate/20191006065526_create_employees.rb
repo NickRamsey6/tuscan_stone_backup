@@ -1,0 +1,11 @@
+class CreateEmployees < ActiveRecord::Migration[5.2]
+  def change
+    create_table :employees do |t|
+      t.string :name
+      t.decimal :wage
+      t.integer :store_id
+
+      t.timestamps
+    end
+  end
+end
