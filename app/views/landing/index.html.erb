@@ -1,18 +1,100 @@
 <h1>Tuscan Stone Pizza</h1>
 
-<h2>Today's Combined Sales</h2>
-  $<%= @todays_sales %>
+<table>
+  <thead>
+    <tr>
+      <th>All Store Sales</th>
+      <th>All Store Labor</th>
+      <th>All Store COGS</th>
+      <th>Total Gross Margin</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>$<%= @todays_sales %></td>
+      <td>$<%= @todays_labor %></td>
+      <td>$<%= @todays_cogs %></td>
+      <td>$<%= @todays_grossmargin %></td>
+    </tr>
+  </tbody>
+</table>
 
-<h2>Today's Combined Labor Cost</h2>
-  $<%= @todays_labor %>
-
-<h2>Today's Combined Labor Cost</h2>
-  $<%= @todays_cogs %>
-
-<h2>Today's Gross Margin</h2>
-  $<%= @todays_grossmargin %>
-
-
+<h2>New Castle</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Sales</th>
+        <th>Labor</th>
+        <th>COGS</th>
+        <th>Gross Margin</th>
+      <tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>$<%= @nc_sales %></td>
+        <td>$<%= @nc_labor %></td>
+        <td>$<%= @nc_cogs %></td>
+        <td>$<%= @nc_grossmargin %></td>
+      </tr>
+    </tbody>
+  </table>
+  <h2>Mercer Island</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Sales</th>
+          <th>Labor</th>
+          <th>COGS</th>
+          <th>Gross Margin</th>
+        <tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$<%= @mi_sales %></td>
+          <td>$<%= @mi_labor %></td>
+          <td>$<%= @mi_cogs %></td>
+          <td>$<%= @mi_grossmargin %></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>Tiger Mountain</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Sales</th>
+            <th>Labor</th>
+            <th>COGS</th>
+            <th>Gross Margin</th>
+          <tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>$<%= @tm_sales %></td>
+            <td>$<%= @tm_labor %></td>
+            <td>$<%= @tm_cogs %></td>
+            <td>$<%= @tm_grossmargin %></td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>Issaquah</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Sales</th>
+              <th>Labor</th>
+              <th>COGS</th>
+              <th>Gross Margin</th>
+            <tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>$<%= @is_sales %></td>
+              <td>$<%= @is_labor %></td>
+              <td>$<%= @is_cogs %></td>
+              <td>$<%= @is_grossmargin %></td>
+            </tr>
+          </tbody>
+        </table>
 
 <h3>Stores</h3>
 <p><%= link_to "Stores", stores_path %></p>
