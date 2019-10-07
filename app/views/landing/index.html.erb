@@ -3,6 +3,15 @@
 <h2>Today's Combined Sales</h2>
   $<%= @todays_sales %>
 
+<h2>Today's Combined Labor Cost</h2>
+  $<%= @todays_labor %>
+
+<h2>Today's Combined Labor Cost</h2>
+  $<%= @todays_cogs %>
+
+<h2>Today's Gross Margin</h2>
+  $<%= @todays_grossmargin %>
+
 <h3>Import Stores Data</h3>
 <%= form_tag import_stores_path, multipart: true do %>
 <%= file_field_tag :file %>
@@ -23,6 +32,12 @@
 
 <h3>Import Order Data</h3>
 <%= form_tag import_orders_path, multipart: true do %>
+<%= file_field_tag :file %>
+<%= submit_tag "Upload" %>
+<% end %>
+
+<h3>Import Timecard Data</h3>
+<%= form_tag import_timecards_path, multipart: true do %>
 <%= file_field_tag :file %>
 <%= submit_tag "Upload" %>
 <% end %>

@@ -13,4 +13,7 @@ Rails.application.routes.draw do
   resources :orders do
     collection { post :import }
   end
+  resources :timecards do
+    collection { post :import }
+  end
 end
