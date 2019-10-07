@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Lisa1</title>
+    <title>Tuscan Stone Pizza</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,20 @@
   </head>
 
   <body>
+    <header>
+      <nav class='nav-style'>
+        <div class="nav">
+          <ul>
+            <li><%= link_to "Uploads", uploads_path %></li>
+            <li><%= link_to "Employees", employees_path %></li>
+            <li><%= link_to "Products", products_path %></li>
+            <li><%= link_to "Stores", stores_path %></li>
+            <li style="float:left"><%= link_to "Tuscan Stone", '/' %></li>
+          </ul>
+            <%= yield :nav %>
+        </div>
+      </nav>
+    </header>
     <%= yield %>
   </body>
 </html>

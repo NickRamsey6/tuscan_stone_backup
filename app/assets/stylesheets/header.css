@@ -1,0 +1,19 @@
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  padding-bottom: 10px;
+}
+
+nav li {
+  display: inline;
+  float: right;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+/*
+nav li:hover {
+  background-color: #D80000
+} */

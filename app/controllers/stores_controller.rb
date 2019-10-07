@@ -1,7 +1,7 @@
 class StoresController < ApplicationController
 
   def index
-    @stores = Store.all
+    @stores = Store.all()
     render :index
   end
 
@@ -26,6 +26,7 @@ class StoresController < ApplicationController
 
   def show
     @store = Store.find(params[:id])
+    @todays_sales = ActiveRecord::Base.connection.execute("SELECT SUM(price) FROM products JOIN orders ON (orders.product_id = products.id) WHERE store_id =(#{@store.id});").values[0][0]
     render :show
   end
 
@@ -49,8 +50,9 @@ class StoresController < ApplicationController
     redirect_to'/'
   end
 
+
   private
   def store_params
-    params.require(:store).permit(:name)
+    params.require(:store).permit(:name, :id)
   end
 end
