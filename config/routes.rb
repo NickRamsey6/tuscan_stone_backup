@@ -16,4 +16,6 @@ Rails.application.routes.draw do
   resources :timecards do
     collection { post :import }
   end
+
+  get '/uploads' => 'upload#index'
 end

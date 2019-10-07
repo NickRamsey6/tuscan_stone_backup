@@ -1,0 +1,33 @@
+<h1>Upload New Data</h1>
+
+<h3>Import Stores Data</h3>
+<%= form_tag import_stores_path, multipart: true do %>
+<%= file_field_tag :file %>
+<%= submit_tag "Upload" %>
+<% end %>
+
+<h3>Import Product Data</h3>
+<%= form_tag import_products_path, multipart: true do %>
+<%= file_field_tag :file %>
+<%= submit_tag "Upload" %>
+<% end %>
+
+<h3>Import Employee Data</h3>
+<%= form_tag import_employees_path, multipart: true do %>
+<%= file_field_tag :file %>
+<%= submit_tag "Upload" %>
+<% end %>
+
+<h3>Import Order Data</h3>
+<%= form_tag import_orders_path, multipart: true do %>
+<%= file_field_tag :file %>
+<%= submit_tag "Upload" %>
+<% end %>
+
+<h3>Import Timecard Data</h3>
+<%= form_tag import_timecards_path, multipart: true do %>
+<%= file_field_tag :file %>
+<%= submit_tag "Upload" %>
+<% end %>
+
+<p><%= link_to "Home", root_path %></p>

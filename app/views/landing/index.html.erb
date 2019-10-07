@@ -12,35 +12,7 @@
 <h2>Today's Gross Margin</h2>
   $<%= @todays_grossmargin %>
 
-<h3>Import Stores Data</h3>
-<%= form_tag import_stores_path, multipart: true do %>
-<%= file_field_tag :file %>
-<%= submit_tag "Upload" %>
-<% end %>
 
-<h3>Import Product Data</h3>
-<%= form_tag import_products_path, multipart: true do %>
-<%= file_field_tag :file %>
-<%= submit_tag "Upload" %>
-<% end %>
-
-<h3>Import Employee Data</h3>
-<%= form_tag import_employees_path, multipart: true do %>
-<%= file_field_tag :file %>
-<%= submit_tag "Upload" %>
-<% end %>
-
-<h3>Import Order Data</h3>
-<%= form_tag import_orders_path, multipart: true do %>
-<%= file_field_tag :file %>
-<%= submit_tag "Upload" %>
-<% end %>
-
-<h3>Import Timecard Data</h3>
-<%= form_tag import_timecards_path, multipart: true do %>
-<%= file_field_tag :file %>
-<%= submit_tag "Upload" %>
-<% end %>
 
 <h3>Stores</h3>
 <p><%= link_to "Stores", stores_path %></p>
@@ -50,3 +22,6 @@
 
 <h3>Employees</h3>
 <p><%= link_to "Employees", employees_path %></p>
+
+<h3>Upload New Data</h3>
+<p><%= link_to "Uploads", uploads_path %></p>
