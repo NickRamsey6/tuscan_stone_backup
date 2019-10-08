@@ -2,9 +2,8 @@ body {
   font-family: Arial, Verdana, sans-serif;
   color: #111111;
 }
-table {
-  width: 600px;
-}
+
+
 th, td {
   padding: 7px 10px 10px 10px;
 }

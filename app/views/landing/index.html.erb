@@ -1,11 +1,12 @@
 <h1>Tuscan Stone Pizza</h1>
 
+
 <table>
   <thead>
     <tr>
-      <th>All Store Sales</th>
-      <th>All Store Labor</th>
-      <th>All Store COGS</th>
+      <th>All Stores Sales</th>
+      <th>All Stores Labor</th>
+      <th>All Stores COGS</th>
       <th>Total Gross Margin</th>
     </tr>
   </thead>
@@ -19,26 +20,14 @@
   </tbody>
 </table>
 
-<h2>New Castle</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Sales</th>
-        <th>Labor</th>
-        <th>COGS</th>
-        <th>Gross Margin</th>
-      <tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>$<%= @nc_sales %></td>
-        <td>$<%= @nc_labor %></td>
-        <td>$<%= @nc_cogs %></td>
-        <td>$<%= @nc_grossmargin %></td>
-      </tr>
-    </tbody>
-  </table>
-  <h2>Mercer Island</h2>
+<div class="chart">
+  <%= pie_chart [["Sales", @todays_sales], ["Labor", @todays_labor], ["COGS", @todays_cogs]] %>
+</div>
+<br>
+<br>
+<div class="row">
+  <div class="store-tables col-md-3">
+    <h2>New Castle</h2>
     <table>
       <thead>
         <tr>
@@ -46,17 +35,40 @@
           <th>Labor</th>
           <th>COGS</th>
           <th>Gross Margin</th>
-        <tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>$<%= @mi_sales %></td>
-          <td>$<%= @mi_labor %></td>
-          <td>$<%= @mi_cogs %></td>
-          <td>$<%= @mi_grossmargin %></td>
-        </tr>
-      </tbody>
-    </table>
+          <tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>$<%= @nc_sales %></td>
+              <td>$<%= @nc_labor %></td>
+              <td>$<%= @nc_cogs %></td>
+              <td>$<%= @nc_grossmargin %></td>
+            </tr>
+          </tbody>
+        </table>
+  </div>
+  <div class="store-tables col-md-3">
+    <h2>Mercer Island</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Sales</th>
+            <th>Labor</th>
+            <th>COGS</th>
+            <th>Gross Margin</th>
+            <tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>$<%= @mi_sales %></td>
+              <td>$<%= @mi_labor %></td>
+              <td>$<%= @mi_cogs %></td>
+              <td>$<%= @mi_grossmargin %></td>
+            </tr>
+          </tbody>
+        </table>
+  </div>
+  <div class="store-tables col-md-3">
     <h2>Tiger Mountain</h2>
       <table>
         <thead>
@@ -76,6 +88,8 @@
           </tr>
         </tbody>
       </table>
+    </div>
+    <div class="store-tables col-md-3">
       <h2>Issaquah</h2>
         <table>
           <thead>
@@ -87,19 +101,24 @@
             <tr>
           </thead>
           <tbody>
-            <tr>
-              <td>$<%= @is_sales %></td>
-              <td>$<%= @is_labor %></td>
-              <td>$<%= @is_cogs %></td>
-              <td>$<%= @is_grossmargin %></td>
-            </tr>
+              <tr>
+                <td>$<%= @is_sales %></td>
+                <td>$<%= @is_labor %></td>
+                <td>$<%= @is_cogs %></td>
+                <td>$<%= @is_grossmargin %></td>
+              </tr>
           </tbody>
         </table>
+      </div>
+    </div>
+    <div class="bar-chart">
+      <%= column_chart [["New Castle Sales", @nc_sales], ["Mercer Island Sales", @mi_sales], ["Tiger Mountain Sales", @tm_sales], ["Issaquah Sales", @is_sales]] %>
+    </div>
 
-        <h2>Most popular pizza</h2>
-        <ul>
-          <li>Type: | Quantity:</li>
-          <li><%= @most_orders[0] %></li>
-          <li><%= @most_orders[1] %></li>
-          <li><%= @most_orders[2] %></li>
-        </ul>
+  <h2>Most popular pizza</h2>
+      <ul>
+        <li>Type: | Quantity:</li>
+        <li><%= @most_orders[0] %></li>
+        <li><%= @most_orders[1] %></li>
+        <li><%= @most_orders[2] %></li>
+      </ul>
