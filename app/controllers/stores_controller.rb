@@ -26,10 +26,10 @@ class StoresController < ApplicationController
 
   def show
     @store = Store.find(params[:id])
-    @todays_sales = ActiveRecord::Base.connection.execute("SELECT SUM(price) FROM products JOIN orders ON (orders.product_id = products.id) WHERE store_id =(#{@store.id});").values[0][0]
-    @todays_labor = ActiveRecord::Base.connection.execute("SELECT SUM(wage*hours) FROM employees JOIN timecards ON(timecards.employee_id = employees.id) WHERE employees.store_id =(#{@store.id});").values[0][0]
-    @todays_cogs = ActiveRecord::Base.connection.execute("SELECT SUM(cost) FROM products JOIN orders ON (orders.product_id = products.id) WHERE store_id =(#{@store.id});").values[0][0]
-    @todays_grossmargin = ActiveRecord::Base.connection.execute("SELECT(SELECT SUM(price) FROM products JOIN orders ON (orders.product_id = products.id) WHERE store_id=(#{@store.id})) - ((SELECT SUM(wage*hours) FROM employees JOIN timecards ON(timecards.employee_id = employees.id) WHERE employees.store_id=(#{@store.id})) + (SELECT SUM(cost) FROM products JOIN orders ON (orders.product_id = products.id) WHERE store_id =(#{@store.id})))").values[0][0]
+    @todays_sales = ActiveRecord::Base.connection.execute("SELECT SUM(price) FROM products JOIN orders ON (orders.product_id = products.id) WHERE store_id =(#{@store.id});").values[0][0].to_i
+    @todays_labor = ActiveRecord::Base.connection.execute("SELECT SUM(wage*hours) FROM employees JOIN timecards ON(timecards.employee_id = employees.id) WHERE employees.store_id =(#{@store.id});").values[0][0].to_i
+    @todays_cogs = ActiveRecord::Base.connection.execute("SELECT SUM(cost) FROM products JOIN orders ON (orders.product_id = products.id) WHERE store_id =(#{@store.id});").values[0][0].to_i
+    @todays_grossmargin = ActiveRecord::Base.connection.execute("SELECT(SELECT SUM(price) FROM products JOIN orders ON (orders.product_id = products.id) WHERE store_id=(#{@store.id})) - ((SELECT SUM(wage*hours) FROM employees JOIN timecards ON(timecards.employee_id = employees.id) WHERE employees.store_id=(#{@store.id})) + (SELECT SUM(cost) FROM products JOIN orders ON (orders.product_id = products.id) WHERE store_id =(#{@store.id})))").values[0][0].to_i
     render :show
   end
 
