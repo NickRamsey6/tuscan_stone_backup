@@ -3,6 +3,16 @@ body {
   color: #111111;
 }
 
+.store-tables{
+  width: 400px;
+  display: inline-block;
+}
+
+.row {
+  position: relative;
+  top: 100px;
+}
+
 
 th, td {
   padding: 7px 10px 10px 10px;
@@ -23,4 +33,24 @@ tr:hover {
 }
 .money {
   text-align: right;
+}
+.chart {
+  position: relative;
+  top: -140px;
+  left: -100px;
+  float: right;
+}
+
+.bar-chart{
+  position: relative;
+  top: 100px;
+}
+
+.popular {
+  position: relative;
+  top: 100px;
+}
+
+h3 {
+  text-align: center;
 }

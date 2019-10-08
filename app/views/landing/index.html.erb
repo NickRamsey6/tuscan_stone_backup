@@ -26,6 +26,7 @@
 <br>
 <br>
 <div class="row">
+  <h1>Store Sales</h1>
   <div class="store-tables col-md-3">
     <h2>New Castle</h2>
     <table>
@@ -112,9 +113,10 @@
       </div>
     </div>
     <div class="bar-chart">
+      <h3>Store Sales</h3>
       <%= column_chart [["New Castle Sales", @nc_sales], ["Mercer Island Sales", @mi_sales], ["Tiger Mountain Sales", @tm_sales], ["Issaquah Sales", @is_sales]] %>
     </div>
-
+<div class="popular">
   <h2>Most popular pizza</h2>
       <ul>
         <li>Type: | Quantity:</li>
@@ -122,3 +124,4 @@
         <li><%= @most_orders[1] %></li>
         <li><%= @most_orders[2] %></li>
       </ul>
+</div>
