@@ -5,6 +5,23 @@
 <h3>Today's COGS: $<%= @todays_cogs %></h3>
 <h3>Today's Gross Margin: $<%= @todays_grossmargin %></h3>
 
+<h2>Today's Most popular pizza</h2>
+<ul>
+  <li>Type: | Quantity:</li>
+  <li><%= @most_orders[0] %></li>
+  <li><%= @most_orders[1] %></li>
+  <li><%= @most_orders[2] %></li>
+</ul>
+
+<h2>Today's Employee's</h2>
+<% @todays_employees.each do |employee| %>
+  <ul>
+    <li>
+      <%= employee.inspect %>
+    </li>
+    </ul>
+    <% end %>
+
 <p><%= link_to "Edit", edit_store_path(@store) %></p>
 <p><%= link_to "Delete", edit_store_path(@store),
   :data => {:confirm => "You sure?", :method => "delete"} %></p>

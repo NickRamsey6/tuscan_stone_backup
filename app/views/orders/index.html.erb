@@ -1,0 +1,22 @@
+<h1>Masters Order List</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Day</th>
+      <th>Product ID</th>
+      <th>Store ID</th>
+      <th>Order ID</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @orders.each do |order| %>
+    <tr>
+      <td><%= order.day %></td>
+      <td><%= order.product_id %></td>
+      <td><%= order.store_id %></td>
+      <td><%= order.id %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>        
