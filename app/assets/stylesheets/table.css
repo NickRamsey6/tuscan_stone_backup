@@ -21,15 +21,15 @@ th {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 90%;
-  border-bottom: 2px solid #111111;
-  border-top: 1px solid #999;
+  border-bottom: 2px solid red;
+  border-top: 1px solid red;
   text-align: left;
 }
 tr.even {
   background-color: #efefef;
 }
 tr:hover {
-  background-color: #c3e6e5;
+  background-color: #F27983;
 }
 .money {
   text-align: right;
@@ -54,3 +54,10 @@ tr:hover {
 h3 {
   text-align: center;
 }
+/* body{
+  background-color: -webkit-linear-gradient(to right, #ffc500, #c21500);
+  background: linear-gradient(to right, #ffc500, #c21500);
+}
+background: #c21500;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ffc500, #c21500);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ffc500, #c21500); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ */
