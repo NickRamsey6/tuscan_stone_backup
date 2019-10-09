@@ -13,7 +13,7 @@
     <% @employees.each do |employee| %>
     <tr>
       <td><%= link_to employee.name, employee_path(employee) %></td>
-      <td><%= employee.wage %></td>
+      <td>$<%= employee.wage %></td>
       <td><%= employee.store_id %></td>
       <td><%= employee.id %></td>
     </tr>

@@ -3,7 +3,20 @@ nav ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  padding-bottom: 10px;
+  position: fixed;
+  background-color: #ffffff;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  border-bottom: 3px solid red;
+}
+
+.nav-style {
+  background-image: url('standard_tuscan.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 640px 300px;
+  padding-bottom: 400px;
 }
 
 nav li {
@@ -13,7 +26,12 @@ nav li {
   padding: 14px 16px;
   text-decoration: none;
 }
-/*
+
+
 nav li:hover {
-  background-color: #D80000
-} */
+  border-bottom: 3px solid red;
+}
+
+nav li.active {
+  border-bottom: 3px solid red;
+}

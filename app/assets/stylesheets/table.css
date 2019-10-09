@@ -2,9 +2,18 @@ body {
   font-family: Arial, Verdana, sans-serif;
   color: #111111;
 }
-table {
-  width: 600px;
+
+.store-tables{
+  width: 400px;
+  display: inline-block;
 }
+
+.row {
+  position: relative;
+  top: 100px;
+}
+
+
 th, td {
   padding: 7px 10px 10px 10px;
 }
@@ -12,16 +21,43 @@ th {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 90%;
-  border-bottom: 2px solid #111111;
-  border-top: 1px solid #999;
+  border-bottom: 2px solid red;
+  border-top: 1px solid red;
   text-align: left;
 }
 tr.even {
   background-color: #efefef;
 }
 tr:hover {
-  background-color: #c3e6e5;
+  background-color: #F27983;
 }
 .money {
   text-align: right;
 }
+.chart {
+  position: relative;
+  top: -140px;
+  left: -100px;
+  float: right;
+}
+
+.bar-chart{
+  position: relative;
+  top: 100px;
+}
+
+.popular {
+  position: relative;
+  top: 100px;
+}
+
+h3 {
+  text-align: center;
+}
+/* body{
+  background-color: -webkit-linear-gradient(to right, #ffc500, #c21500);
+  background: linear-gradient(to right, #ffc500, #c21500);
+}
+background: #c21500;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ffc500, #c21500);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ffc500, #c21500); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ */
