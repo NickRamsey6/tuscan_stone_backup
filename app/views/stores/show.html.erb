@@ -5,19 +5,35 @@
 <h3>Today's COGS: $<%= @todays_cogs %></h3>
 <h3>Today's Gross Margin: $<%= @todays_grossmargin %></h3>
 
-<h2>Today's Most popular pizza</h2>
-<ul>
-  <li>Type: | Quantity:</li>
-  <li><%= @most_orders[0] %></li>
-  <li><%= @most_orders[1] %></li>
-  <li><%= @most_orders[2] %></li>
-</ul>
+<h2>Today's Most Popular Pizzas</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Quantity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= @most_orders[0][0] %></td>
+        <td><%= @most_orders[0][1] %></td>
+      </tr>
+      <tr>
+        <td><%= @most_orders[1][0] %></td>
+        <td><%= @most_orders[1][1] %></td>
+      </tr>
+      <tr>
+        <td><%= @most_orders[2][0] %></td>
+        <td><%= @most_orders[2][1] %></td>
+      </tr>
+    </tbody>
+  </table>
 
 <h2>Today's Employee's</h2>
 <% @todays_employees.each do |employee| %>
   <ul>
     <li>
-      <%= employee.inspect %>
+      <%= link_to employee[0], employee_path(employee[1]) %>
     </li>
     </ul>
     <% end %>
