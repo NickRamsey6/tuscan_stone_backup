@@ -1,5 +1,7 @@
 <h1> Products:</h1>
 
+<%= column_chart Product.group(:name).sum(:cost) %>
+
 <table>
   <thead>
     <tr>
