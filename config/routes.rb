@@ -18,4 +18,5 @@ Rails.application.routes.draw do
   end
 
   get '/uploads' => 'upload#index'
+  get '/db' => 'schema#index'
 end
