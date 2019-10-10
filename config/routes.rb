@@ -19,4 +19,5 @@ Rails.application.routes.draw do
 
   get '/uploads' => 'upload#index'
   get '/db' => 'schema#index'
+  get '/scrum' => 'scrum#index'
 end
