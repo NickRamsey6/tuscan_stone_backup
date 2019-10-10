@@ -14,8 +14,8 @@
     <tr>
       <td><%= link_to product.name, product_path(product) %></td>
       <td><%= product.materials %></td>
-      <td><%= product.cost %></td>
-      <td><%= product.price %></td>
+      <td>$<%= product.cost %></td>
+      <td>$<%= product.price %></td>
     </tr>
     <% end %>
   </tbody>
