@@ -117,11 +117,28 @@
       <%= column_chart [["New Castle Sales", @nc_sales], ["Mercer Island Sales", @mi_sales], ["Tiger Mountain Sales", @tm_sales], ["Issaquah Sales", @is_sales]] %>
     </div>
 <div class="popular">
-  <h2>Most popular pizza</h2>
-      <ul>
-        <li>Type: | Quantity:</li>
-        <li><%= @most_orders[0].join(" ") %></li>
-        <li><%= @most_orders[1] %></li>
-        <li><%= @most_orders[2] %></li>
-      </ul>
+  <h2>Today's Most Popular Pizzas</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Quantity</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><%= @most_orders[0][0] %></td>
+          <td><%= @most_orders[0][1] %></td>
+        </tr>
+        <tr>
+          <td><%= @most_orders[1][0] %></td>
+          <td><%= @most_orders[1][1] %></td>
+        </tr>
+        <tr>
+          <td><%= @most_orders[2][0] %></td>
+          <td><%= @most_orders[2][1] %></td>
+        </tr>
+      </tbody>
+    </table>
+
 </div>
